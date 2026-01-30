@@ -1,0 +1,13 @@
+{
+  "mania": {
+    "role": "user",
+    "banned": false,
+    "chatId": 0
+  },
+  "shadowstrafe": {
+    "chatId": 7121058072,
+    "role": "admin",
+    "banned": false,
+    "tgId": 7121058072
+  }
+}
