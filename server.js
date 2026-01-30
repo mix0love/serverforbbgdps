@@ -132,7 +132,14 @@ bot.command('ban', (ctx) => {
     ctx.reply(`Banned @${targetName}.`);
 });
 
-bot.launch();
+// Launch bot with dropPendingUpdates to clear any backlog that might cause conflicts
+bot.launch({
+    dropPendingUpdates: true
+}).then(() => {
+    console.log("Telegram Bot started.");
+}).catch(err => {
+    console.error("Failed to launch bot:", err);
+});
 
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
